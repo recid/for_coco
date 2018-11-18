@@ -1,0 +1,7 @@
+---
+- name: Create router files
+  template:
+    src: test
+    dest: "/tmp/files/test.{{ item }}"
+  with_sequence: start=1 end="{{ nb_files }}"
+
